@@ -10,6 +10,24 @@ A simple NLP project that classifies relationship communication patterns from te
 - breadcrumbing  
 - normal  
 
+## Project Structure
+
+
+data/
+├── raw/
+└── processed/
+
+models/
+
+src/
+├── train.py
+├── preprocess.py
+└── predict.py
+
+api/
+└── main.py
+
+
 ## Status
 
-Work in progress.
+Work in progress. Initial project structure has been created.
