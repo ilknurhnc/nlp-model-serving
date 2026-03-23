@@ -7,20 +7,19 @@
 ## Project Overview
 
 The system includes:
+- Custom dataset creation with labeled communication patterns
 
-Custom dataset creation with labeled communication patterns
+- Text preprocessing using TF-IDF
 
-Text preprocessing using TF-IDF
+- Model training with Logistic Regression
 
-Model training with Logistic Regression
+- Evaluation using standard classification metrics
 
-Evaluation using standard classification metrics
+- Local inference script for testing predictions
 
-Local inference script for testing predictions
+- FastAPI-based REST API for real-time inference
 
-FastAPI-based REST API for real-time inference
-
-Project Structure
+## Project Structure
 relationship-pattern-classifier/
 │
 ├── api/
@@ -42,15 +41,15 @@ relationship-pattern-classifier/
 ├── requirements.txt
 ├── README.md
 └── .gitignore
-Dataset
 
+## Dataset
 The dataset is manually curated and consists of labeled text samples.
 
-Each sample contains:
+# Each sample contains:
 
-text: input message
+- text: input message
 
-label: communication category
+- label: communication category
 
 Example:
 
@@ -61,19 +60,21 @@ text,label
 "Belki sonra konuşuruz",breadcrumbing
 "Yarın buluşalım mı?",normal
 
-The dataset includes a mix of:
 
-Strong (explicit) examples
+# The dataset includes a mix of:
 
-Medium-level examples
+- Strong (explicit) examples
 
-Subtle, real-world variations
+- Medium-level examples
 
-Installation
+- Subtle, real-world variations
 
-Install dependencies:
+- Installation
 
-pip install -r requirements.txt
+# Install dependencies:
+
+-pip install -r requirements.txt
+
 Training the Model
 
 Run:
