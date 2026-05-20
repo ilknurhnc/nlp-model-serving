@@ -1,5 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
+from fastapi.middleware.cors import CORSMiddleware
 import joblib
 import numpy as np
 
@@ -8,6 +9,17 @@ app = FastAPI(
     title="Relationship Pattern Classifier",
     description="Detects communication patterns like lovebombing, gaslighting, etc.",
     version="1.0.0"
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:3000",
+        "http://127.0.0.1:3000"
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 model = joblib.load("models/model.pkl")
