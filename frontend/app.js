@@ -8,7 +8,7 @@ button.addEventListener("click", async () => {
 
     try {
 
-        const response = await fetch("http://localhost:8001/predict", {
+        const response = await fetch("http://localhost:8000/predict", {
 
             method: "POST",
 

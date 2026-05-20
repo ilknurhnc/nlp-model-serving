@@ -1,0 +1,18 @@
+services:
+
+  api:
+    build: .
+    container_name: relationship-api
+
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build: ./frontend
+    container_name: relationship-frontend
+
+    ports:
+      - "3000:3000"
+
+    depends_on:
+      - api

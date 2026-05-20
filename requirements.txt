@@ -1,8 +1,6 @@
-transformers
-torch
+fastapi
+uvicorn
 scikit-learn
 pandas
 numpy
 joblib
-fastapi
-uvicorn
